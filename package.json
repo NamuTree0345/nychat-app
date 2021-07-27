@@ -1,0 +1,59 @@
+{
+  "name": "nychat-app",
+  "description": "NYChat Electron App",
+  "homepage": "http://anonymous-chat.kro.kr/",
+  "author": {
+    "email": "namnyang0510@namnyang.live",
+    "name": "NY"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^13.1.7",
+    "electron-builder": "^22.11.7"
+  },
+  "scripts": {
+    "start": "electron .",
+    "build-win": "electron-builder build --windows",
+    "build-linux": "electron-builder build --l",
+    "build-mac": "electron-builder build --m"
+  },
+  "build": {
+    "productName": "nychat-app",
+    "appId": "me.namnyang.nychat",
+    "asar": true,
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "./resources/installer/icon.ico"
+    },
+    "linux": {
+      "icon": "./resources/installer/icon.png",
+      "target": [ "deb", "rpm" ],
+      "description": "NYChat Electron App",
+      "category": "Network",
+      "desktop": {
+        "Name": "NYChat",
+        "linux.executableName": "nychat-app",
+        "Icon": "nychat-app",
+        "Type": "Application",
+        "Categories": "Utility;Network;"
+      }
+    },
+    "mac": {
+      "target": "zip",
+      "category": "me.namnyang"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "directories": {
+      "buildResources": "./resources/installer/",
+      "output": "./dist/",
+      "app": "."
+    }
+  }
+}
