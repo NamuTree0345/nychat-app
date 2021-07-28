@@ -43,7 +43,7 @@
       }
     },
     "mac": {
-      "target": "zip",
+      "target": "dmg",
       "category": "me.namnyang"
     },
     "nsis": {
