@@ -1,0 +1,3 @@
+[submodule "nychat"]
+	path = nychat
+	url = https://github.com/NamuTree0345/nychat
