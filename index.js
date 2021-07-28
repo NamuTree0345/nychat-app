@@ -13,7 +13,7 @@ function createWindow () {
   mainWindow.setMenuBarVisibility(false)
 
   // and load the index.html of the app.
-  mainWindow.loadFile('src/index.html')
+  mainWindow.loadFile('nychat/index.html')
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
